@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">  
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Halloween icon" href="images/edu.ico">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/gtn.css">
+	<link rel="stylesheet" href="styles/slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+      $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+      });
+    </script>
+    <title>Contact us | Educanine | PNW</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><IMG SRC="images/educanine1.jpg" alt="educanine logo"></a>
+      <h2> Educanine | Contact us</h2>
+      <h3><i>Training & Behaivor consulting because every Dog deserves education</i></h3>
+    </header>
+    <nav id="mobile_menu"></nav>
+    <nav id="nav_menu">
+      <ul>
+        <li><a id="a1" href="index.html">Home</a></li>
+        <li><a id="a2" href="gtn.html">Get to "Nose" us</a></li>
+        <li><a id="a3" href="Test.html">Testimonials</a></li>
+        <li><a id="a4" href="service1.html">Services</a>
+          <ul>
+            <li><a  id ="sev" href="service1.html">Investments</a></li>
+            <li><a href="train.html#con">Consulting</a></li>
+            <li><a href="train.html#train">Training</a></li>
+            <li><a href="train.html#board">Boarding</a></li>
+            <li><a href="boot.html">Paw-gwarts</a></li>
+          </ul></li>
+        <li><a class="lastitem" id="a5" href="hey.html">Contact us</a></li>
+      </ul>
+    </nav>
+    <main>
+      <aside>
+       	<h1>Let us know how we can help</h1>
+        <p>
+          Write us alittle snippet about what you are looking for and why.
+        </p>
+        <p>
+          Please include the following to help us geta full picture of what will be needed:
+        </p>
+        <ul>
+          <li>Dogs name</li>
+          <li>Breed (estimates okay)</li>
+          <li>Age (estimates okay)</li>
+          <li>Issue (If any, elaborate here)</li>
+        </ul>
+        <p>
+          The more details you can provide us, the better we can assist you.
+        </p>
+        <p>
+          If you are looking for something else, feel free to message here and let us see if we can help you find it.
+        </p>
+       	<div>
+       	  <div class="container" id="cont">
+            <form action="#empty">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name" required>
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name" required>
+              <label for="county">County</label>
+              <select id="county" name="county" >
+                <option value="king">King</option>
+                <option value="pierce">Pierce</option>
+                <option value="kitsap">Kitsap</option>
+                <option value="thurston">Thurston</option>
+                <option value="mason">Mason</option>
+                <option value="snohomish">Snohomish</option>
+                <option value="other">Other</option>
+              </select>
+              <label for="subject">How can we help?</label>
+              <textarea id="subject" name="subject" placeholder="What has you here?" style="height:200px" required></textarea>
+              <input type="submit" value="Submit">
+  			</form>
+		  </div>
+		</div>
+      </aside>  
+      <section>
+        <nav id="navm">
+          <ul>
+            <li><a href="sabre.html">Sabre</a></li>
+            <li><a href="archie.html">Archie</a></li>
+            <li><a href="cloud.html">Cloud</a></li>
+          </ul>
+        </nav>
+      </section>
+    </main>
+    <footer>
+      <p><b><i>&copy; Copyright 2020 Educanine PNW.</i></b></p>
+    </footer>
+  </body>
+</html>
