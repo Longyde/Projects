@@ -1,0 +1,31 @@
+using System;
+
+namespace Quiz_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter your name: ");
+            string username = Console.ReadLine();
+            Console.WriteLine($"Hello {username}, welcome to my second guesser!");
+
+            Console.Write("Enter the hour of time: ");
+            float hour = float.Parse(Console.ReadLine());
+            Console.Write("Enter the minute of time: ");
+            float mins = float.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the seconds: ");
+            float secs = float.Parse(Console.ReadLine());
+            float seconds = ((hour * 3600) + (mins * 60) + (secs));
+            float remains = (86400 - secs);
+            float rem = seconds / 86400;
+            float perc = rem * 100;
+
+            Console.WriteLine($"The number of seconds since midnight is {seconds} seconds.");
+            Console.WriteLine($"The number of seconds remaining in the day are {remains} seconds.");
+            Console.WriteLine($"The percentage of the day that has passed is {perc}%.");
+
+        }    
+
+    }
+}
