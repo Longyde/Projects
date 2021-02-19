@@ -1,0 +1,124 @@
+html {
+    background-image: url(front.jpg);
+    text-align: center;
+    padding-top: 30%;
+}
+
+/*Hide menu item until mobile*/
+@media only screen and (min-width: 767px) {
+    #nav_menu ul li ul #sev {
+      display: none !important;
+      
+
+      }
+  }
+  
+/* mobile landscape to tablet portrait */
+@media only screen and (max-width: 959px) {
+#nav_menu ul li a {
+  font-size: .875em;
+}
+section h1 {
+  font-size: 1.5em; 
+}
+section h2, aside h2 {
+  font-size: 1.125em;    
+}
+}
+
+/* mobile portrait to mobile landscape */
+@media only screen and (max-width: 767px) {
+#nav_menu {
+  display: none;
+}
+#mobile_menu {
+  display: block;
+}
+header {
+  display: flex;
+  text-align: center;
+}
+section {
+  background-color: #5bd5ff;
+  order: 2;
+  width: 70%;
+  float: none;
+  margin: 0 auto;
+  display: flex;        
+}
+section ul li {
+  border: .2em solid black;
+  padding:  .2em 7em .2em 7em;          
+}
+#navm {
+  flex-wrap: wrap; 
+  width:100%;
+}
+body {
+      width: 100%; 
+      min-width: 500px;
+      margin: 0;
+}
+main {
+    background-color: #5bd5ff;
+      flex-direction: column;
+}
+header, footer {
+      flex-wrap: wrap;
+      justify-content: center;
+}
+footer p { margin-right: 0; }
+header h2 {
+      font-size: 1.625em; 
+      margin: .4em 0 .25em 0;
+}
+header h3 {
+      font-size: 1em; 
+      margin-left: 0;
+}
+header img {
+      float: none;
+}
+aside {
+  order: 1;
+  width: 90%;
+  float: none;
+  flex-basis: 21.5%;
+  margin: 0 2.0202% 2.0202% 2.0202%;     
+}
+}
+
+/* mobile portrait to mobile landscape */
+@media only screen and (max-width: 479px) {
+header h2 {
+  font-size: 1.375em;
+}
+header h3 {
+  font-size: .8125em;
+}
+p {
+  font-size: .875em; 
+}
+section h1, section h2, aside h2 {
+  font-size: 1em;
+}
+section li, aside li {
+  font-size: .875em;
+}
+section {
+  width: 90%;
+  float: none;
+  margin: 0 auto;
+  display: flex;     
+}
+aside h3 {
+  font-size: .9375em; 
+}
+footer p {
+  font-size: .6875em; 
+}
+body {
+  margin:0;
+  min-width: 400px;
+}
+}
