@@ -23,7 +23,7 @@
   sleep(4);
   ResearchBroker();
   sleep(4);
-  echo "\n\t Step 3 - Get a tarding account.";
+  echo "\n\t Step 3 - Get a trading account.";
   sleep(4);
   GetAccount();
   sleep(4);
