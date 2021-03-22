@@ -13,7 +13,7 @@ The Project is a blog, with a small products section, dynamic text within the Ab
 Setp 1) You can view the homepage, about, products, and many other pages, however a non-user cannot post!
 
 Step 2) Click register
-https://github.com/Longyde/Projects/blob/main/Python/LongmireLandBlog/ScreenShots/LongmireLand/RegisterPage.JPG?raw=true
+
 Step 3) Edit your new Profile
 
 Step 4) Create your first Post.
