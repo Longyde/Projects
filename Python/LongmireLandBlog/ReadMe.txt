@@ -13,7 +13,7 @@ The Project is a blog, with a small products section, dynamic text within the Ab
 Setp 1) You can view the homepage, about, products, and many other pages, however a non-user cannot post!
 
 Step 2) Click register
-![](ScreenShots/LongmireLand/RegisterPage.JPG)
+![](/ScreenShots/LongmireLand/RegisterPage.JPG)
 
 Step 3) Edit your new Profile
 
