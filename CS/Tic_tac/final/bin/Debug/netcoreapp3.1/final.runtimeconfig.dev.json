@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\verna\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\verna\\.nuget\\packages"
+    ]
+  }
+}

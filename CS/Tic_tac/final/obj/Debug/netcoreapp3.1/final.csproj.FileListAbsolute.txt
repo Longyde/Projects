@@ -1,0 +1,13 @@
+C:\Users\verna\source\repos\final\final\bin\Debug\netcoreapp3.1\final.exe
+C:\Users\verna\source\repos\final\final\bin\Debug\netcoreapp3.1\final.deps.json
+C:\Users\verna\source\repos\final\final\bin\Debug\netcoreapp3.1\final.runtimeconfig.json
+C:\Users\verna\source\repos\final\final\bin\Debug\netcoreapp3.1\final.runtimeconfig.dev.json
+C:\Users\verna\source\repos\final\final\bin\Debug\netcoreapp3.1\final.dll
+C:\Users\verna\source\repos\final\final\bin\Debug\netcoreapp3.1\final.pdb
+C:\Users\verna\source\repos\final\final\obj\Debug\netcoreapp3.1\final.csprojAssemblyReference.cache
+C:\Users\verna\source\repos\final\final\obj\Debug\netcoreapp3.1\final.AssemblyInfoInputs.cache
+C:\Users\verna\source\repos\final\final\obj\Debug\netcoreapp3.1\final.AssemblyInfo.cs
+C:\Users\verna\source\repos\final\final\obj\Debug\netcoreapp3.1\final.csproj.CoreCompileInputs.cache
+C:\Users\verna\source\repos\final\final\obj\Debug\netcoreapp3.1\final.dll
+C:\Users\verna\source\repos\final\final\obj\Debug\netcoreapp3.1\final.pdb
+C:\Users\verna\source\repos\final\final\obj\Debug\netcoreapp3.1\final.genruntimeconfig.cache
