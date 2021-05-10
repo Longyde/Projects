@@ -16,9 +16,9 @@
     $category = $_GET["category"];
     $number = $_GET["number"];
     
-    if($db = sqlite_open('phonebook.db',0666, $sqlliteerror))
+    if($db = open('phonebook.db',0666, $sqlliteerror))
     {
-      sqlite_query($db,"INSERT INTO contacts Values('$name','$category','$number')");
+      query($db,"INSERT INTO contacts Values('$name','$category','$number')");
     }
     else
     {

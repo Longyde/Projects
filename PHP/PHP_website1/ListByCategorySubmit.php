@@ -14,10 +14,10 @@
   <?php
   
     $category = $_GET["category"];
-    if($db = sqlite_open('phonebook.db',0666, $sqlliteerror))
+    if($db = open('phonebook.db',0666, $sqlliteerror))
     {
-      $query = sqlite_query($db,"SELECT name,category,number FROM contacts WHERE category='$category'");
-      $results = sqlite_fetch_all($query, SQLITE_ASSOC);
+      $query = query($db,"SELECT name,category,number FROM contacts WHERE category='$category'");
+      $results = fetchArray($query, SQLITE_ASSOC);
       
       foreach($results as $result)
       {

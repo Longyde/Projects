@@ -13,14 +13,15 @@
   
   <br><img src="phone.jpg" /><br><br>
   <?php
-    if($db = sqlite_open('phonebook.db',0666, $sqlliteerror))
+
+    if($db = open('phonebook.db',0666, $sqlliteerror))
     {
-      $query = sqlite_query($db,"SELECT name,category,number FROM contacts");
-      $results = sqlite_fetch_all($query, SQLITE_ASSOC);
+      $query = query($db,"SELECT name,category,number FROM contacts");
+      $results = fetchArray($query, SQLITE_ASSOC);
       
       foreach($results as $result)
       {
-        printf("Contact Name: <em>%s</em> <br>&nbsp&nbsp Relationship category: %s <br>&nbsp&nbsp&nbsp&nbspPhone number <strong>%s</strong> <br />", $result['name'], $result['category'], $result['number']);
+        printf("Contact Name: <em>%s</em> <br>&nbsp&nbsp Relationship category: %s <br>&nbsp&nbsp&nbsp&nbspPhone number <strong>%s</strong> <br />", $result['name'], $result['category'], $result['number1']);
       }
     }
     else
