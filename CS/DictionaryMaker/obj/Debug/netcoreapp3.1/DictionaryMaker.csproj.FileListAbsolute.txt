@@ -1,0 +1,13 @@
+C:\Users\verna\source\repos\DictionaryMaker\bin\Debug\netcoreapp3.1\DictionaryMaker.exe
+C:\Users\verna\source\repos\DictionaryMaker\bin\Debug\netcoreapp3.1\DictionaryMaker.deps.json
+C:\Users\verna\source\repos\DictionaryMaker\bin\Debug\netcoreapp3.1\DictionaryMaker.runtimeconfig.json
+C:\Users\verna\source\repos\DictionaryMaker\bin\Debug\netcoreapp3.1\DictionaryMaker.runtimeconfig.dev.json
+C:\Users\verna\source\repos\DictionaryMaker\bin\Debug\netcoreapp3.1\DictionaryMaker.dll
+C:\Users\verna\source\repos\DictionaryMaker\bin\Debug\netcoreapp3.1\DictionaryMaker.pdb
+C:\Users\verna\source\repos\DictionaryMaker\obj\Debug\netcoreapp3.1\DictionaryMaker.csprojAssemblyReference.cache
+C:\Users\verna\source\repos\DictionaryMaker\obj\Debug\netcoreapp3.1\DictionaryMaker.AssemblyInfoInputs.cache
+C:\Users\verna\source\repos\DictionaryMaker\obj\Debug\netcoreapp3.1\DictionaryMaker.AssemblyInfo.cs
+C:\Users\verna\source\repos\DictionaryMaker\obj\Debug\netcoreapp3.1\DictionaryMaker.csproj.CoreCompileInputs.cache
+C:\Users\verna\source\repos\DictionaryMaker\obj\Debug\netcoreapp3.1\DictionaryMaker.dll
+C:\Users\verna\source\repos\DictionaryMaker\obj\Debug\netcoreapp3.1\DictionaryMaker.pdb
+C:\Users\verna\source\repos\DictionaryMaker\obj\Debug\netcoreapp3.1\DictionaryMaker.genruntimeconfig.cache
