@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Note Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-bar">
+        <div class="brand">
+          <span class="brand-logo" aria-hidden="true">🗒️</span>
+          <div>
+            <h1>Color Note</h1>
+            <p>Organise your colourful thoughts everywhere</p>
+          </div>
+        </div>
+        <div class="search-wrapper">
+          <label class="sr-only" for="note-search">Search notes</label>
+          <input
+            id="note-search"
+            type="search"
+            placeholder="Search notes..."
+            autocomplete="off"
+          />
+        </div>
+        <div class="view-controls">
+          <button class="icon-button" data-view="list" title="List view">
+            <span>☰</span>
+          </button>
+          <button class="icon-button" data-view="detailed" title="Detailed view">
+            <span>≣</span>
+          </button>
+          <button class="icon-button" data-view="grid" title="Grid view">
+            <span>▦</span>
+          </button>
+          <button class="icon-button" data-view="large-grid" title="Large grid view">
+            <span>⬚</span>
+          </button>
+          <select id="sort-select" title="Sort notes">
+            <option value="newest">Newest first</option>
+            <option value="oldest">Oldest first</option>
+            <option value="title">Title A → Z</option>
+            <option value="color">Colour</option>
+          </select>
+        </div>
+      </header>
+      <div class="app-body">
+        <aside class="sidebar">
+          <section class="sidebar-section">
+            <div class="section-header">
+              <h2>Folders</h2>
+              <button class="text-button" id="add-folder-btn">＋</button>
+            </div>
+            <ul class="folder-list" id="folder-list"></ul>
+          </section>
+          <section class="sidebar-section">
+            <div class="section-header">
+              <h2>Colour labels</h2>
+              <button class="text-button" id="manage-colours-btn">⚙️</button>
+            </div>
+            <ul class="colour-list" id="colour-list"></ul>
+          </section>
+          <section class="sidebar-section calendar-section">
+            <div class="section-header">
+              <h2>Calendar</h2>
+              <div class="calendar-controls">
+                <button class="text-button" id="prev-month" title="Previous month">‹</button>
+                <span id="calendar-month"></span>
+                <button class="text-button" id="next-month" title="Next month">›</button>
+              </div>
+            </div>
+            <div class="calendar" id="calendar"></div>
+          </section>
+        </aside>
+        <main class="notes-area">
+          <div class="notes-toolbar">
+            <button class="primary-button" id="new-note-btn">New note</button>
+            <div class="active-filter" id="active-filter"></div>
+          </div>
+          <div class="note-empty" id="empty-state">
+            <span class="empty-emoji" aria-hidden="true">🌈</span>
+            <h2>No notes yet</h2>
+            <p>Create your first colourful note to get started.</p>
+          </div>
+          <div class="notes-container" id="notes-container" data-view="grid"></div>
+        </main>
+      </div>
+    </div>
+
+    <div class="modal" id="note-modal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <header class="modal-header">
+          <h2 id="note-modal-title">New note</h2>
+          <button class="icon-button" data-close-modal>&times;</button>
+        </header>
+        <form id="note-form">
+          <div class="form-grid">
+            <label>
+              <span>Title</span>
+              <input type="text" id="note-title" required maxlength="120" />
+            </label>
+            <label>
+              <span>Folder</span>
+              <select id="note-folder"></select>
+            </label>
+            <label>
+              <span>Colour</span>
+              <div class="colour-select" id="note-colour"></div>
+            </label>
+            <label>
+              <span>Date</span>
+              <input type="date" id="note-date" />
+            </label>
+          </div>
+          <div class="editor-toolbar">
+            <button type="button" data-command="bold" title="Bold"><strong>B</strong></button>
+            <button type="button" data-command="italic" title="Italic"><em>I</em></button>
+            <button type="button" data-command="underline" title="Underline"><u>U</u></button>
+            <button type="button" data-command="insertUnorderedList" title="Bullet list">• List</button>
+            <button type="button" data-command="undo" title="Undo">↺</button>
+            <button type="button" data-command="redo" title="Redo">↻</button>
+          </div>
+          <div class="editor" id="note-content" contenteditable="true" aria-label="Note content"></div>
+          <footer class="modal-footer">
+            <button type="button" class="ghost-button" data-close-modal>Cancel</button>
+            <button type="submit" class="primary-button">Save note</button>
+          </footer>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="colour-modal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <header class="modal-header">
+          <h2>Manage colour labels</h2>
+          <button class="icon-button" data-close-modal>&times;</button>
+        </header>
+        <div class="colour-manager" id="colour-manager"></div>
+        <footer class="modal-footer">
+          <button type="button" class="ghost-button" data-close-modal>Close</button>
+        </footer>
+      </div>
+    </div>
+
+    <template id="note-card-template">
+      <article class="note-card">
+        <header class="note-card-header">
+          <div class="note-card-colour" aria-hidden="true"></div>
+          <div class="note-card-meta">
+            <h3 class="note-card-title"></h3>
+            <div class="note-card-tags"></div>
+          </div>
+          <div class="note-card-actions">
+            <button class="text-button" data-action="edit">Edit</button>
+            <button class="text-button text-danger" data-action="delete">Delete</button>
+          </div>
+        </header>
+        <div class="note-card-content"></div>
+      </article>
+    </template>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
